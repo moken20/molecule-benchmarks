@@ -1,0 +1,15 @@
+distance: 1.595
+basis: 'sto-3g'
+nelecas: 4
+norbcas: 6
+spin: 0
+charge: 0
+geometry: 
+  - - Li
+    - - 0.0
+      - 0.0
+      - 0.0
+  - - H
+    - - 0.0
+      - 0.0
+      - ${molecule.distance}

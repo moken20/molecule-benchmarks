@@ -1,0 +1,15 @@
+distance: 1.679
+basis: 'sto-3g'
+nelecas: 12
+norbcas: 12
+spin: 0
+charge: 0
+geometry:
+  - - Cr
+    - - 0.0
+      - 0.0
+      - 0.0
+  - - Cr
+    - - 0.0
+      - 0.0
+      - ${molecule.distance}

@@ -1,5 +1,9 @@
-title: "Naphthalene"
 distance: null
+basis: 'sto-3g'
+nelecas: 10
+norbcas: 10
+spin: 0
+charge: 0
 geometry: [
     ['C', [2.439610, 0.709984, -0.000000]],
     ['C', [1.247664, 1.406267, -0.000000]],
@@ -20,8 +24,3 @@ geometry: [
     ['H', [-3.384046, -1.245366, -0.000000]],
     ['H', [-3.383203, 1.245123, -0.000000]],
 ]
-basis: 'sto-3g'
-nelecas: 10
-norbcas: 10
-spin: 0
-charge: 0

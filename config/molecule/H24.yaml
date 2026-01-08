@@ -1,0 +1,103 @@
+distance: 1.1
+basis: 'sto-3g'
+nelecas: 24
+norbcas: 24
+spin: 0
+charge: 0
+geometry:
+  - - H
+    - - 0.0
+      - 0.0
+      - 0.0
+  - - H
+    - - 0.0
+      - 0.0
+      - ${molecule.distance}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 2}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 3}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 4}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 5}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 6}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 7}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 8}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 9}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 10}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 11}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 12}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 13}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 14}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 15}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 16}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 17}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 18}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 19}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 20}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 21}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 22}
+  - - H
+    - - 0.0
+      - 0.0
+      - ${mul:${molecule.distance}, 23}

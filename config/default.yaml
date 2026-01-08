@@ -1,0 +1,49 @@
+# Hydra runtime behavior (disable run-directory bookkeeping / .hydra outputs)
+hydra:
+  run:
+    dir: .              # Run in current working directory (no timestamped output dir)
+  output_subdir: null   # Do not create the .hydra/ folder
+
+# Which algorithms to run and their per-solver options
+algorithms:
+  hf:
+    verbose: 0          # PySCF verbosity
+  cisd:
+    run_flag: true      # Enable/disable this method
+    verbose: 0          # PySCF verbosity
+  ccsd:
+    run_flag: true      # Enable/disable this method
+    verbose: 0          # PySCF verbosity
+    max_cycle: 2000     # CCSD max iterations
+  casci:
+    run_flag: true      # Enable/disable this method
+    verbose: 0          # PySCF verbosity
+    maxiter: 2000       # CASCI max iterations
+  dmrg:
+    run_flag: true               # Enable/disable this method
+    verbose: 0                   # Block2 verbosity
+    schedule:
+      - [10, 20, 30]             # Bond dimensions
+      - [5, 5, 5]                # Sweeps per bond dimension
+      - [1e-4, 1e-5, 0.0]        # Noise per stage
+      - [1e-6, 1e-8, 1e-10]      # Davidson thresholds per stage
+    max_mem: 1024                # Total memory (MB); main.py converts to bytes for Block2
+    dot: 2                       # 1-site or 2-site DMRG
+    workdir: /tmp/dmrg_calc_tmp  # Scratch directory
+    n_threads: 1                 # Thread count for Block2
+    tol: 1e-6                    # Energy convergence tolerance
+    restart_ket: null            # Tag/path to restart from (null = start fresh)
+    smp_tol: 1e-6                # Determinant sampling tolerance
+    eshift: 0                    # Energy shift (advanced)
+    occs: null                   # Initial occupations guess (null = random)
+
+# Global settings shared by multiple methods
+nroots: 2          # Number of low-energy roots (excited states) to compute
+ci_cutoff: 1e-6    # Determinant coefficient cutoff when extracting wavefunctions
+
+# Hydra config composition: select a molecule config and disable Hydra logging
+defaults:
+  - molecule: H2
+  - override hydra/job_logging: disabled
+  - override hydra/hydra_logging: disabled
+  - _self_
